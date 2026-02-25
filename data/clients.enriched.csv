@@ -1,0 +1,51 @@
+ClientId,ClientName,Address,Bed,Bath,Sqft,Windows,Pets,Stairs,Monday,Tuesday,Wednesday,Thursday,Friday,PrefersSameTeam,PreferredStaffId,Latitude,Longitude,H3Cell,GeocodeStatus
+C001,Adams,"84 Willow Lane, Wiscasset, ME 04578",3,2,960,True,True,False,A,P,P,N,N,False,,44.0129569,-69.676147,882a3499d5fffff,OK
+C002,Bennett,"71 Vail Drive, Newry, ME 04261",4,5,4382,False,True,False,A,N,P,A,P,False,,44.5014495,-70.8378838,882ba90f1bfffff,OK
+C003,Campbell,"182 Chestnut Knoll Lane, Bethel, ME 04217",3,1,1875,False,True,True,N,A,N,A,P,False,,44.3860173,-70.8407589,882ba90cbbfffff,OK
+C004,Dalton,"2 Flood Street, Mexico, ME 04257",4,1,1000,False,False,True,P,N,N,A,P,False,,44.5574178,-70.5459791,882ba915d1fffff,OK
+C005,Ellis,"29 Jewell Street, Jay, ME 04239",4,3,2368,False,False,True,A,A,P,A,N,True,,44.4809388,-70.1896151,882ba9a061fffff,OK
+C006,Foster,"52 Quimby Lane, Fayette, ME 04349",2,1,484,True,True,False,A,N,A,N,P,False,,44.4828123,-70.0429424,882ba9b529fffff,OK
+C007,Garcia,"33 High Street, Buckfield, ME 04220",3,2,1740,False,False,False,P,P,A,A,N,False,,44.2921688,-70.3671864,882ba9ad85fffff,OK
+C008,Hayes,"1 Nishell Drive, Paris, ME 04281",3,2,1612,False,True,True,A,A,P,N,N,True,S03,44.2429588,-70.5101013,882ba9356dfffff,OK
+C009,Irwin,"2057 Main St, Lovell, ME 04051",3,1,1517,False,True,True,N,N,A,P,N,False,,44.2430436,-70.8747159,882ba92b03fffff,OK
+C010,Jensen,"44 Allen Road, Lovell, ME 04051",3,3,4446,True,False,True,P,A,P,A,P,False,,44.1515502,-70.8924943,882ba929d1fffff,OK
+C011,Keller,"195 Pleasant Street, Oxford, ME 04270",5,2,3076,False,False,True,A,P,N,A,P,False,,44.1301292,-70.50341329999999,882ba935b7fffff,OK
+C012,Larson,"22 Robins Way, Turner, ME 04282",3,1,1736,False,False,False,P,A,A,P,N,False,,44.2617144,-70.2563741,882ba9acd7fffff,OK
+C013,Mitchell,"15 D And B, Buckfield, ME 04220",3,2,1547,False,True,False,A,P,P,A,P,False,,44.2784553,-70.4336031,882ba93297fffff,OK
+C014,Nolan,"124 Rumford Avenue, Woodstock, ME 04219",2,1,1025,False,True,False,A,N,N,P,N,True,S01,44.39126359999999,-70.64519179999999,882ba93a49fffff,OK
+C015,Owens,"32 Dillon Road, Harrison, ME 04040",3,3,2200,False,False,True,P,A,P,P,P,False,,44.11457799999999,-70.6646066,882ba92e41fffff,OK
+C016,Parker,"57 Mt. Henry Road, Bridgton, ME 04009",2,1,720,False,False,False,P,P,A,N,P,False,,44.0488529,-70.6971697,882ba92ea9fffff,OK
+C017,Quinn,"12 Warren Street, Bridgton, ME 04009",2,1,620,False,False,False,P,A,P,A,P,False,,44.0232084,-70.7157953,882ba92cc1fffff,OK
+C018,Reed,"1277 Naples Road, Harrison, ME 04040",4,4,3198,True,True,False,A,A,P,N,A,False,,44.0320985,-70.62772869999999,882ba925adfffff,OK
+C019,Sullivan,"65 Tenney Hill Road, Casco, ME 04015",3,1,1734,False,False,True,P,N,P,P,P,True,,43.982346,-70.5525548,882a345a4bfffff,OK
+C020,Turner,"198 Senator Black Road, Baldwin, ME 04091",2,2,1280,False,False,True,A,N,A,N,P,False,,43.8309161,-70.7674844,882a344b15fffff,OK
+C021,Underwood,"2 Bonny Eagle Road, Hollis, ME 04042",10,3,3793,False,False,True,A,P,N,P,N,False,,43.6650334,-70.6063013,882a344c59fffff,OK
+C022,Vargas,"272 Cumberland Street, Westbrook, ME 04092",2,1,900,False,False,True,N,A,N,P,P,False,,43.6870708,-70.3589685,882a344603fffff,OK
+C023,Walker,"133 Webb Street, Portland, ME 04102",3,2,2196,True,False,False,A,A,A,N,P,False,,43.66996220000001,-70.3217686,882a340927fffff,OK
+C024,Xu,"117 Pine Street #2, Portland, ME 04102",1,2,801,False,False,True,P,A,P,N,P,False,,43.649692,-70.27058339999999,882a340913fffff,OK
+C025,Young,"80 Vesper Street #2, Portland, ME 04101",2,1,920,False,True,True,N,N,N,N,N,False,,43.6671901,-70.2446944,882a34095bfffff,OK
+C026,Zimmerman,"232 Pine Street, South Portland, ME 04106",4,2,2240,False,True,False,P,N,N,A,P,False,,43.6400024,-70.2405589,882a340835fffff,OK
+C027,Abbott,"338 Ocean Street, South Portland, ME 04106",6,2,2092,False,False,True,N,P,A,P,N,True,S05,43.6306089,-70.2510695,882a3409c3fffff,OK
+C028,Bishop,"265 Lincoln Street, South Portland, ME 04106",4,2,1781,False,False,True,A,P,P,N,P,False,,43.63350699999999,-70.284112,882a3409e1fffff,OK
+C029,Carter,"76 County Road, Scarborough, ME 04074",3,1,1584,False,True,True,N,N,P,P,P,False,,43.6420854,-70.39602210000001,882a3446a5fffff,OK
+C030,Dawson,"85 Running Hill Road, Scarborough, ME 04074",4,3,2080,False,True,False,P,N,N,A,P,False,,43.6341721,-70.3660948,882a3446abfffff,OK
+C031,Elliott,"60 Euclid Avenue, Portland, ME 04103",3,2,1075,True,True,True,P,A,P,A,P,False,,43.6955585,-70.3155573,882a340965fffff,OK
+C032,Fisher,"294 Greely Road, Cumberland, ME 04021",4,2,1891,False,False,True,P,A,A,P,N,False,,43.8049528,-70.24079809999999,882a345617fffff,OK
+C033,Gibson,"17 Feldspar Lane #9, Cumberland, ME 04021",2,2,1231,False,False,True,N,P,P,N,A,False,,43.7819682,-70.2573503,882a3456e7fffff,OK
+C034,Hawkins,"18 Portland Street, Yarmouth, ME 04096",3,3,2053,True,False,False,A,A,A,A,N,False,,43.798289,-70.18290379999999,882a34193dfffff,OK
+C035,Ingram,"53 Chestnut Street, Bath, ME 04530",3,2,906,False,True,False,P,A,P,N,A,False,,43.9149126,-69.82173139999999,882a348917fffff,OK
+C036,Jordan,"53 High Street, Bath, ME 04530",3,2,1701,False,True,True,P,A,A,A,P,True,,43.8788774,-69.82322479999999,882a348987fffff,OK
+C037,Kline,"545 Old Bath Road, Brunswick, ME 04011",3,2,1255,False,True,True,N,A,A,A,P,False,,43.9332868,-69.87280539999999,882a348927fffff,OK
+C038,Lewis,"152 Mckeen Street #D17, Brunswick, ME 04011",2,1,1138,False,True,False,A,N,P,A,N,False,,43.9051113,-69.9905828,882a34c431fffff,OK
+C039,Morrison,"21 Renee Road, Freeport, ME 04032",4,3,2121,False,False,True,N,A,P,A,N,True,S08,43.8930584,-70.091107,882a34ced7fffff,OK
+C040,Nash,"83 Leanne St, Topsham, ME 04086",2,2,924,True,False,False,P,N,P,N,A,False,,43.9474358,-69.9853035,882a34c46dfffff,OK
+C041,Ortiz,"10 Walker Street, Augusta, ME 04330",3,2,1464,False,False,False,A,N,P,A,N,False,,44.311298,-69.7909126,882b1a6aadfffff,OK
+C042,Pierce,"47 Gage Street, Augusta, ME 04330",3,2,1188,False,False,True,P,N,N,P,N,False,,44.3099814,-69.77496950000001,882b1a6ae3fffff,OK
+C043,Ramirez,"35 E Chestnut Street, Augusta, ME 04330",4,2,1448,False,False,True,N,P,A,N,A,False,,44.3131171,-69.7654209,882b1a6a8dfffff,OK
+C044,Snyder,"21 Laurel Street, Augusta, ME 04330",6,2,1996,False,True,False,P,N,P,N,P,True,,44.3196136,-69.7746579,882b1a6ae1fffff,OK
+C045,Tucker,"119 Mount Vernon Avenue, Augusta, ME 04330",3,1,1199,False,False,True,A,N,A,P,A,False,,44.3278821,-69.7800566,882b1a6aedfffff,OK
+C046,Valdez,"93 Cushnoc Road, Vassalboro, ME 04989",3,2,2900,True,False,True,A,A,A,A,P,True,S02,44.3898417,-69.71800429999999,882b1a7887fffff,OK
+C047,Ward,"153 Collins Rd, Chelsea, ME 04330",3,1,1168,False,False,False,N,P,P,A,N,False,,44.2499709,-69.7331442,882b1a6f09fffff,OK
+C048,Yates,"218 Highland Avenue, Gardiner, ME 04345",3,4,2344,False,False,True,N,A,A,P,N,False,,44.232077,-69.78606110000001,882b1a6d49fffff,OK
+C049,Baxter,"12 Key Hill Road, Greene, ME 04236",3,2,2320,False,False,True,A,N,P,N,P,False,,44.2032378,-70.10565129999999,882a34da13fffff,OK
+C050,Connelly,"104 Memorial Drive, Winthrop, ME 04364",3,2,1416,False,True,True,A,N,P,N,A,False,,44.3145038,-69.9688877,882ba9a6c3fffff,OK

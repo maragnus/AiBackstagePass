@@ -1,0 +1,9 @@
+StaffId,StaffName,Address,HasPetAllergy,LimitedMobility,CleansWindows,Monday,Tuesday,Wednesday,Thursday,Friday,Latitude,Longitude,H3Cell,GeocodeStatus
+S01,Carter,"75 Adams Landing Road, Topsham, ME 04086",False,False,True,ANP,AN,ANP,NP,AN,43.9660022,-69.926817,882a34c629fffff,OK
+S02,Nguyen,"325 N Raymond Road, Poland, ME 04274",True,False,False,AN,NP,AN,N,P,44.014169,-70.42171499999999,882ba9269bfffff,OK
+S03,Patel,"1 Route126, Monmouth, ME 04280",False,False,True,P,ANP,NP,AN,A,44.1807315,-69.9940578,882a34d023fffff,OK
+S04,Rossi,"83 Hydrangea Circle #11, Naples, ME 04055",False,True,False,AN,AN,A,AN,N,43.97471729999999,-70.5963347,882a345a63fffff,OK
+S05,Brooks,"255 Anderson Road, Sebago, ME 04029",False,False,False,ANP,ANP,ANP,ANP,AN,43.9007531,-70.6162609,882a34581bfffff,OK
+S06,Diaz,"510 Roosevelt Trail, Casco, ME 04015",True,False,True,N,NP,P,NP,NP,43.9360963,-70.5424781,882a345127fffff,OK
+S07,Kim,"35 W Presumpscot Street #B, Portland, ME 04103",False,True,False,A,AN,N,A,AN,43.6810821,-70.2621333,882a34095dfffff,OK
+S08,ONeil,"79 Frost Street, Portland, ME 04102",False,False,False,P,NP,N,P,NP,43.6616795,-70.30163720000002,882a34093dfffff,OK
