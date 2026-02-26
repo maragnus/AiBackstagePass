@@ -1,0 +1,579 @@
+Model: gpt-5.2
+Encoding: Canonical
+Separator: Colon
+Format: csv
+
+Input format: csv
+Staff:
+staff id;h3;windows;nopets;nostairs;sunday;monday;tuesday;wednesday;thursday;friday;saturday
+S01;882a34c629fffff;W:Y;P:N;S:N;Su:X;Mo:A,Mo:N,Mo:P;Tu:A,Tu:N;We:A,We:N,We:P;Th:N,Th:P;Fr:A,Fr:N;Sa:X
+S02;882ba9269bfffff;W:N;P:Y;S:N;Su:X;Mo:A,Mo:N;Tu:N,Tu:P;We:A,We:N;Th:N;Fr:P;Sa:X
+S03;882a34d023fffff;W:Y;P:N;S:N;Su:X;Mo:P;Tu:A,Tu:N,Tu:P;We:N,We:P;Th:A,Th:N;Fr:A;Sa:X
+S04;882a345a63fffff;W:N;P:N;S:Y;Su:X;Mo:A,Mo:N;Tu:A,Tu:N;We:A;Th:A,Th:N;Fr:N;Sa:X
+S05;882a34581bfffff;W:N;P:N;S:N;Su:X;Mo:A,Mo:N,Mo:P;Tu:A,Tu:N,Tu:P;We:A,We:N,We:P;Th:A,Th:N,Th:P;Fr:A,Fr:N;Sa:X
+S06;882a345127fffff;W:Y;P:Y;S:N;Su:X;Mo:N;Tu:N,Tu:P;We:P;Th:N,Th:P;Fr:N,Fr:P;Sa:X
+S07;882a34095dfffff;W:N;P:N;S:Y;Su:X;Mo:A;Tu:A,Tu:N;We:N;Th:A;Fr:A,Fr:N;Sa:X
+S08;882a34093dfffff;W:N;P:N;S:N;Su:X;Mo:P;Tu:N,Tu:P;We:N;Th:P;Fr:N,Fr:P;Sa:X
+
+
+Clients:
+client id;h3;windows;pets;stairs;hours;sunday;monday;tuesday;wednesday;thursday;friday;saturday
+C001;882a3499d5fffff;W:Y;P:Y;S:N;1.5;Su:X;Mo:A;Tu:P;We:P;Th:N;Fr:N;Sa:X
+C002;882ba90f1bfffff;W:N;P:Y;S:N;2.5;Su:X;Mo:A;Tu:N;We:P;Th:A;Fr:P;Sa:X
+C003;882ba90cbbfffff;W:N;P:Y;S:Y;1.5;Su:X;Mo:N;Tu:A;We:N;Th:A;Fr:P;Sa:X
+C004;882ba915d1fffff;W:N;P:N;S:Y;1.5;Su:X;Mo:P;Tu:N;We:N;Th:A;Fr:P;Sa:X
+C005;882ba9a061fffff;W:N;P:N;S:Y;2.0;Su:X;Mo:A;Tu:A;We:P;Th:A;Fr:N;Sa:X
+C006;882ba9b529fffff;W:Y;P:Y;S:N;1.0;Su:X;Mo:A;Tu:N;We:A;Th:N;Fr:P;Sa:X
+C007;882ba9ad85fffff;W:N;P:N;S:N;1.5;Su:X;Mo:P;Tu:P;We:A;Th:A;Fr:N;Sa:X
+C008;882ba9356dfffff;W:N;P:Y;S:Y;1.5;Su:X;Mo:A;Tu:A;We:P;Th:N;Fr:N;Sa:X
+C009;882ba92b03fffff;W:N;P:Y;S:Y;1.5;Su:X;Mo:N;Tu:N;We:A;Th:P;Fr:N;Sa:X
+C010;882ba929d1fffff;W:Y;P:N;S:Y;4.0;Su:X;Mo:P;Tu:A;We:P;Th:A;Fr:P;Sa:X
+C011;882ba935b7fffff;W:N;P:N;S:Y;2.0;Su:X;Mo:A;Tu:P;We:N;Th:A;Fr:P;Sa:X
+C012;882ba9acd7fffff;W:N;P:N;S:N;1.5;Su:X;Mo:P;Tu:A;We:A;Th:P;Fr:N;Sa:X
+C013;882ba93297fffff;W:N;P:Y;S:N;1.5;Su:X;Mo:A;Tu:P;We:P;Th:A;Fr:P;Sa:X
+C014;882ba93a49fffff;W:N;P:Y;S:N;1.0;Su:X;Mo:A;Tu:N;We:N;Th:P;Fr:N;Sa:X
+C015;882ba92e41fffff;W:N;P:N;S:Y;1.5;Su:X;Mo:P;Tu:A;We:P;Th:P;Fr:P;Sa:X
+C016;882ba92ea9fffff;W:N;P:N;S:N;1.0;Su:X;Mo:P;Tu:P;We:A;Th:N;Fr:P;Sa:X
+C017;882ba92cc1fffff;W:N;P:N;S:N;1.0;Su:X;Mo:P;Tu:A;We:P;Th:A;Fr:P;Sa:X
+C018;882ba925adfffff;W:Y;P:Y;S:N;3.5;Su:X;Mo:A;Tu:A;We:P;Th:N;Fr:A;Sa:X
+C019;882a345a4bfffff;W:N;P:N;S:Y;1.5;Su:X;Mo:P;Tu:N;We:P;Th:P;Fr:P;Sa:X
+C020;882a344b15fffff;W:N;P:N;S:Y;1.5;Su:X;Mo:A;Tu:N;We:A;Th:N;Fr:P;Sa:X
+C021;882a344c59fffff;W:N;P:N;S:Y;2.5;Su:X;Mo:A;Tu:P;We:N;Th:P;Fr:N;Sa:X
+C022;882a344603fffff;W:N;P:N;S:Y;1.0;Su:X;Mo:N;Tu:A;We:N;Th:P;Fr:P;Sa:X
+C023;882a340927fffff;W:Y;P:N;S:N;2.5;Su:X;Mo:A;Tu:A;We:A;Th:N;Fr:P;Sa:X
+C024;882a340913fffff;W:N;P:N;S:Y;1.0;Su:X;Mo:P;Tu:A;We:P;Th:N;Fr:P;Sa:X
+C025;882a34095bfffff;W:N;P:Y;S:Y;1.0;Su:X;Mo:N;Tu:N;We:N;Th:N;Fr:N;Sa:X
+C026;882a340835fffff;W:N;P:Y;S:N;1.5;Su:X;Mo:P;Tu:N;We:N;Th:A;Fr:P;Sa:X
+C027;882a3409c3fffff;W:N;P:N;S:Y;2.0;Su:X;Mo:N;Tu:P;We:A;Th:P;Fr:N;Sa:X
+C028;882a3409e1fffff;W:N;P:N;S:Y;1.5;Su:X;Mo:A;Tu:P;We:P;Th:N;Fr:P;Sa:X
+C029;882a3446a5fffff;W:N;P:Y;S:Y;1.5;Su:X;Mo:N;Tu:N;We:P;Th:P;Fr:P;Sa:X
+C030;882a3446abfffff;W:N;P:Y;S:N;2.0;Su:X;Mo:P;Tu:N;We:N;Th:A;Fr:P;Sa:X
+C031;882a340965fffff;W:Y;P:Y;S:Y;2.0;Su:X;Mo:P;Tu:A;We:P;Th:A;Fr:P;Sa:X
+C032;882a345617fffff;W:N;P:N;S:Y;1.5;Su:X;Mo:P;Tu:A;We:A;Th:P;Fr:N;Sa:X
+C033;882a3456e7fffff;W:N;P:N;S:Y;1.5;Su:X;Mo:N;Tu:P;We:P;Th:N;Fr:A;Sa:X
+C034;882a34193dfffff;W:Y;P:N;S:N;2.5;Su:X;Mo:A;Tu:A;We:A;Th:A;Fr:N;Sa:X
+C035;882a348917fffff;W:N;P:Y;S:N;1.5;Su:X;Mo:P;Tu:A;We:P;Th:N;Fr:A;Sa:X
+C036;882a348987fffff;W:N;P:Y;S:Y;1.5;Su:X;Mo:P;Tu:A;We:A;Th:A;Fr:P;Sa:X
+C037;882a348927fffff;W:N;P:Y;S:Y;1.5;Su:X;Mo:N;Tu:A;We:A;Th:A;Fr:P;Sa:X
+C038;882a34c431fffff;W:N;P:Y;S:N;1.0;Su:X;Mo:A;Tu:N;We:P;Th:A;Fr:N;Sa:X
+C039;882a34ced7fffff;W:N;P:N;S:Y;2.0;Su:X;Mo:N;Tu:A;We:P;Th:A;Fr:N;Sa:X
+C040;882a34c46dfffff;W:Y;P:N;S:N;1.5;Su:X;Mo:P;Tu:N;We:P;Th:N;Fr:A;Sa:X
+C041;882b1a6aadfffff;W:N;P:N;S:N;1.5;Su:X;Mo:A;Tu:N;We:P;Th:A;Fr:N;Sa:X
+C042;882b1a6ae3fffff;W:N;P:N;S:Y;1.5;Su:X;Mo:P;Tu:N;We:N;Th:P;Fr:N;Sa:X
+C043;882b1a6a8dfffff;W:N;P:N;S:Y;1.5;Su:X;Mo:N;Tu:P;We:A;Th:N;Fr:A;Sa:X
+C044;882b1a6ae1fffff;W:N;P:Y;S:N;2.0;Su:X;Mo:P;Tu:N;We:P;Th:N;Fr:P;Sa:X
+C045;882b1a6aedfffff;W:N;P:N;S:Y;1.0;Su:X;Mo:A;Tu:N;We:A;Th:P;Fr:A;Sa:X
+C046;882b1a7887fffff;W:Y;P:N;S:Y;3.0;Su:X;Mo:A;Tu:A;We:A;Th:A;Fr:P;Sa:X
+C047;882b1a6f09fffff;W:N;P:N;S:N;1.0;Su:X;Mo:N;Tu:P;We:P;Th:A;Fr:N;Sa:X
+C048;882b1a6d49fffff;W:N;P:N;S:Y;2.0;Su:X;Mo:N;Tu:A;We:A;Th:P;Fr:N;Sa:X
+C049;882a34da13fffff;W:N;P:N;S:Y;1.5;Su:X;Mo:A;Tu:N;We:P;Th:N;Fr:P;Sa:X
+C050;882ba9a6c3fffff;W:N;P:Y;S:Y;1.5;Su:X;Mo:A;Tu:N;We:P;Th:N;Fr:A;Sa:X
+
+
+Interpretation:
+- Use `id` as the identifier.
+- `windows` means "can clean windows" for staff and `windows` means "requires window cleaning" for clients
+- `nopets` means "has pet allergy" for staff and `pets` means "has pets" for clients.
+- `nostairs` means "limited mobility" for staff and `stairs` means "has stairs" for clients.
+- `sunday`..`saturday` are availability windows. Values may be `Morning,Noon,Afternoon` or encoded as `Mo:A`, `Tu:N`, `Fr:P`.
+- `None` or `X` means unavailable.
+- Do not consider travel time or client hours for this exercise.
+
+Task:
+Create two-person teams and assign each client to a team, day (Monday-Friday), and time window (Morning/Noon/Afternoon).
+Distribute assignments evenly across teams and days as much as possible.
+
+Hard constraints:
+- Client availability must include the assigned day+window.
+- Both staff members must be available in that day+window.
+- If a client requires window cleaning, at least one staff member must clean windows.
+- If a client has pets, no staff member may have pet allergy.
+- If a client has stairs, no staff member may have limited mobility.
+- A team can only visit two clients per time window per day.
+
+If a client cannot be scheduled, include its id in `unassignedClientIds` and do not assign it.
+
+---
+
+{
+  "Teams": [
+    {
+      "TeamId": "T1",
+      "MemberAId": "S01",
+      "MemberBId": "S05"
+    },
+    {
+      "TeamId": "T2",
+      "MemberAId": "S02",
+      "MemberBId": "S06"
+    },
+    {
+      "TeamId": "T3",
+      "MemberAId": "S03",
+      "MemberBId": "S08"
+    },
+    {
+      "TeamId": "T4",
+      "MemberAId": "S04",
+      "MemberBId": "S07"
+    }
+  ],
+  "Assignments": [
+    {
+      "TeamId": "T1",
+      "ClientId": "C018",
+      "Day": "Monday",
+      "Window": "Morning",
+      "DurationMinutes": 210,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C034",
+      "Day": "Monday",
+      "Window": "Morning",
+      "DurationMinutes": 150,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C003",
+      "Day": "Monday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 3,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C037",
+      "Day": "Monday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 4,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C005",
+      "Day": "Tuesday",
+      "Window": "Morning",
+      "DurationMinutes": 120,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C008",
+      "Day": "Tuesday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C009",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 3,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C029",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 4,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C045",
+      "Day": "Wednesday",
+      "Window": "Morning",
+      "DurationMinutes": 60,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C036",
+      "Day": "Wednesday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C021",
+      "Day": "Wednesday",
+      "Window": "Noon",
+      "DurationMinutes": 150,
+      "Sequence": 3,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C042",
+      "Day": "Wednesday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 4,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C028",
+      "Day": "Wednesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 5,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C044",
+      "Day": "Wednesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 120,
+      "Sequence": 6,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C050",
+      "Day": "Thursday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C024",
+      "Day": "Thursday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C019",
+      "Day": "Thursday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 3,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C032",
+      "Day": "Thursday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 4,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C035",
+      "Day": "Friday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C043",
+      "Day": "Friday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C038",
+      "Day": "Friday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 3,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T1",
+      "ClientId": "C048",
+      "Day": "Friday",
+      "Window": "Noon",
+      "DurationMinutes": 120,
+      "Sequence": 4,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T2",
+      "ClientId": "C027",
+      "Day": "Monday",
+      "Window": "Noon",
+      "DurationMinutes": 120,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T2",
+      "ClientId": "C039",
+      "Day": "Monday",
+      "Window": "Noon",
+      "DurationMinutes": 120,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T2",
+      "ClientId": "C040",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T2",
+      "ClientId": "C020",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T2",
+      "ClientId": "C011",
+      "Day": "Tuesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 120,
+      "Sequence": 3,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T2",
+      "ClientId": "C033",
+      "Day": "Tuesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 4,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T2",
+      "ClientId": "C023",
+      "Day": "Thursday",
+      "Window": "Noon",
+      "DurationMinutes": 150,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T2",
+      "ClientId": "C049",
+      "Day": "Thursday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T2",
+      "ClientId": "C010",
+      "Day": "Friday",
+      "Window": "Afternoon",
+      "DurationMinutes": 240,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T2",
+      "ClientId": "C046",
+      "Day": "Friday",
+      "Window": "Afternoon",
+      "DurationMinutes": 180,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T3",
+      "ClientId": "C031",
+      "Day": "Monday",
+      "Window": "Afternoon",
+      "DurationMinutes": 120,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T3",
+      "ClientId": "C015",
+      "Day": "Monday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T3",
+      "ClientId": "C006",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T3",
+      "ClientId": "C025",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T3",
+      "ClientId": "C001",
+      "Day": "Tuesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 3,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T3",
+      "ClientId": "C016",
+      "Day": "Tuesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 60,
+      "Sequence": 4,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T3",
+      "ClientId": "C004",
+      "Day": "Wednesday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T3",
+      "ClientId": "C022",
+      "Day": "Wednesday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T4",
+      "ClientId": "C013",
+      "Day": "Monday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T4",
+      "ClientId": "C041",
+      "Day": "Monday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T4",
+      "ClientId": "C012",
+      "Day": "Tuesday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T4",
+      "ClientId": "C017",
+      "Day": "Tuesday",
+      "Window": "Morning",
+      "DurationMinutes": 60,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T4",
+      "ClientId": "C002",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 150,
+      "Sequence": 3,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T4",
+      "ClientId": "C014",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 4,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T4",
+      "ClientId": "C026",
+      "Day": "Thursday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T4",
+      "ClientId": "C030",
+      "Day": "Thursday",
+      "Window": "Morning",
+      "DurationMinutes": 120,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T4",
+      "ClientId": "C007",
+      "Day": "Friday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T4",
+      "ClientId": "C047",
+      "Day": "Friday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 2,
+      "Notes": ""
+    }
+  ],
+  "UnassignedClientIds": [],
+  "Notes": [
+    "T2 cannot take pet households due to pet-allergy constraints on both members.",
+    "T4 cannot take stair households due to limited-mobility constraints on both members.",
+    "Tuesday is more heavily scheduled because T2 and T3 have limited availability concentrated on Tuesday."
+  ]
+}

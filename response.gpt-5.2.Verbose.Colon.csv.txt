@@ -1,0 +1,579 @@
+Model: gpt-5.2
+Encoding: Verbose
+Separator: Colon
+Format: csv
+
+Input format: csv
+Staff:
+staff id;h3;windows;nopets;nostairs;sunday;monday;tuesday;wednesday;thursday;friday;saturday
+S01;882a34c629fffff;Yes;No;No;None;Morning,Noon,Afternoon;Morning,Noon;Morning,Noon,Afternoon;Noon,Afternoon;Morning,Noon;None
+S02;882ba9269bfffff;No;Yes;No;None;Morning,Noon;Noon,Afternoon;Morning,Noon;Noon;Afternoon;None
+S03;882a34d023fffff;Yes;No;No;None;Afternoon;Morning,Noon,Afternoon;Noon,Afternoon;Morning,Noon;Morning;None
+S04;882a345a63fffff;No;No;Yes;None;Morning,Noon;Morning,Noon;Morning;Morning,Noon;Noon;None
+S05;882a34581bfffff;No;No;No;None;Morning,Noon,Afternoon;Morning,Noon,Afternoon;Morning,Noon,Afternoon;Morning,Noon,Afternoon;Morning,Noon;None
+S06;882a345127fffff;Yes;Yes;No;None;Noon;Noon,Afternoon;Afternoon;Noon,Afternoon;Noon,Afternoon;None
+S07;882a34095dfffff;No;No;Yes;None;Morning;Morning,Noon;Noon;Morning;Morning,Noon;None
+S08;882a34093dfffff;No;No;No;None;Afternoon;Noon,Afternoon;Noon;Afternoon;Noon,Afternoon;None
+
+
+Clients:
+client id;h3;windows;pets;stairs;hours;sunday;monday;tuesday;wednesday;thursday;friday;saturday
+C001;882a3499d5fffff;Yes;Yes;No;1.5;None;Morning;Afternoon;Afternoon;Noon;Noon;None
+C002;882ba90f1bfffff;No;Yes;No;2.5;None;Morning;Noon;Afternoon;Morning;Afternoon;None
+C003;882ba90cbbfffff;No;Yes;Yes;1.5;None;Noon;Morning;Noon;Morning;Afternoon;None
+C004;882ba915d1fffff;No;No;Yes;1.5;None;Afternoon;Noon;Noon;Morning;Afternoon;None
+C005;882ba9a061fffff;No;No;Yes;2.0;None;Morning;Morning;Afternoon;Morning;Noon;None
+C006;882ba9b529fffff;Yes;Yes;No;1.0;None;Morning;Noon;Morning;Noon;Afternoon;None
+C007;882ba9ad85fffff;No;No;No;1.5;None;Afternoon;Afternoon;Morning;Morning;Noon;None
+C008;882ba9356dfffff;No;Yes;Yes;1.5;None;Morning;Morning;Afternoon;Noon;Noon;None
+C009;882ba92b03fffff;No;Yes;Yes;1.5;None;Noon;Noon;Morning;Afternoon;Noon;None
+C010;882ba929d1fffff;Yes;No;Yes;4.0;None;Afternoon;Morning;Afternoon;Morning;Afternoon;None
+C011;882ba935b7fffff;No;No;Yes;2.0;None;Morning;Afternoon;Noon;Morning;Afternoon;None
+C012;882ba9acd7fffff;No;No;No;1.5;None;Afternoon;Morning;Morning;Afternoon;Noon;None
+C013;882ba93297fffff;No;Yes;No;1.5;None;Morning;Afternoon;Afternoon;Morning;Afternoon;None
+C014;882ba93a49fffff;No;Yes;No;1.0;None;Morning;Noon;Noon;Afternoon;Noon;None
+C015;882ba92e41fffff;No;No;Yes;1.5;None;Afternoon;Morning;Afternoon;Afternoon;Afternoon;None
+C016;882ba92ea9fffff;No;No;No;1.0;None;Afternoon;Afternoon;Morning;Noon;Afternoon;None
+C017;882ba92cc1fffff;No;No;No;1.0;None;Afternoon;Morning;Afternoon;Morning;Afternoon;None
+C018;882ba925adfffff;Yes;Yes;No;3.5;None;Morning;Morning;Afternoon;Noon;Morning;None
+C019;882a345a4bfffff;No;No;Yes;1.5;None;Afternoon;Noon;Afternoon;Afternoon;Afternoon;None
+C020;882a344b15fffff;No;No;Yes;1.5;None;Morning;Noon;Morning;Noon;Afternoon;None
+C021;882a344c59fffff;No;No;Yes;2.5;None;Morning;Afternoon;Noon;Afternoon;Noon;None
+C022;882a344603fffff;No;No;Yes;1.0;None;Noon;Morning;Noon;Afternoon;Afternoon;None
+C023;882a340927fffff;Yes;No;No;2.5;None;Morning;Morning;Morning;Noon;Afternoon;None
+C024;882a340913fffff;No;No;Yes;1.0;None;Afternoon;Morning;Afternoon;Noon;Afternoon;None
+C025;882a34095bfffff;No;Yes;Yes;1.0;None;Noon;Noon;Noon;Noon;Noon;None
+C026;882a340835fffff;No;Yes;No;1.5;None;Afternoon;Noon;Noon;Morning;Afternoon;None
+C027;882a3409c3fffff;No;No;Yes;2.0;None;Noon;Afternoon;Morning;Afternoon;Noon;None
+C028;882a3409e1fffff;No;No;Yes;1.5;None;Morning;Afternoon;Afternoon;Noon;Afternoon;None
+C029;882a3446a5fffff;No;Yes;Yes;1.5;None;Noon;Noon;Afternoon;Afternoon;Afternoon;None
+C030;882a3446abfffff;No;Yes;No;2.0;None;Afternoon;Noon;Noon;Morning;Afternoon;None
+C031;882a340965fffff;Yes;Yes;Yes;2.0;None;Afternoon;Morning;Afternoon;Morning;Afternoon;None
+C032;882a345617fffff;No;No;Yes;1.5;None;Afternoon;Morning;Morning;Afternoon;Noon;None
+C033;882a3456e7fffff;No;No;Yes;1.5;None;Noon;Afternoon;Afternoon;Noon;Morning;None
+C034;882a34193dfffff;Yes;No;No;2.5;None;Morning;Morning;Morning;Morning;Noon;None
+C035;882a348917fffff;No;Yes;No;1.5;None;Afternoon;Morning;Afternoon;Noon;Morning;None
+C036;882a348987fffff;No;Yes;Yes;1.5;None;Afternoon;Morning;Morning;Morning;Afternoon;None
+C037;882a348927fffff;No;Yes;Yes;1.5;None;Noon;Morning;Morning;Morning;Afternoon;None
+C038;882a34c431fffff;No;Yes;No;1.0;None;Morning;Noon;Afternoon;Morning;Noon;None
+C039;882a34ced7fffff;No;No;Yes;2.0;None;Noon;Morning;Afternoon;Morning;Noon;None
+C040;882a34c46dfffff;Yes;No;No;1.5;None;Afternoon;Noon;Afternoon;Noon;Morning;None
+C041;882b1a6aadfffff;No;No;No;1.5;None;Morning;Noon;Afternoon;Morning;Noon;None
+C042;882b1a6ae3fffff;No;No;Yes;1.5;None;Afternoon;Noon;Noon;Afternoon;Noon;None
+C043;882b1a6a8dfffff;No;No;Yes;1.5;None;Noon;Afternoon;Morning;Noon;Morning;None
+C044;882b1a6ae1fffff;No;Yes;No;2.0;None;Afternoon;Noon;Afternoon;Noon;Afternoon;None
+C045;882b1a6aedfffff;No;No;Yes;1.0;None;Morning;Noon;Morning;Afternoon;Morning;None
+C046;882b1a7887fffff;Yes;No;Yes;3.0;None;Morning;Morning;Morning;Morning;Afternoon;None
+C047;882b1a6f09fffff;No;No;No;1.0;None;Noon;Afternoon;Afternoon;Morning;Noon;None
+C048;882b1a6d49fffff;No;No;Yes;2.0;None;Noon;Morning;Morning;Afternoon;Noon;None
+C049;882a34da13fffff;No;No;Yes;1.5;None;Morning;Noon;Afternoon;Noon;Afternoon;None
+C050;882ba9a6c3fffff;No;Yes;Yes;1.5;None;Morning;Noon;Afternoon;Noon;Morning;None
+
+
+Interpretation:
+- Use `id` as the identifier.
+- `windows` means "can clean windows" for staff and `windows` means "requires window cleaning" for clients
+- `nopets` means "has pet allergy" for staff and `pets` means "has pets" for clients.
+- `nostairs` means "limited mobility" for staff and `stairs` means "has stairs" for clients.
+- `sunday`..`saturday` are availability windows. Values may be `Morning,Noon,Afternoon` or encoded as `Mo:A`, `Tu:N`, `Fr:P`.
+- `None` or `X` means unavailable.
+- Do not consider travel time or client hours for this exercise.
+
+Task:
+Create two-person teams and assign each client to a team, day (Monday-Friday), and time window (Morning/Noon/Afternoon).
+Distribute assignments evenly across teams and days as much as possible.
+
+Hard constraints:
+- Client availability must include the assigned day+window.
+- Both staff members must be available in that day+window.
+- If a client requires window cleaning, at least one staff member must clean windows.
+- If a client has pets, no staff member may have pet allergy.
+- If a client has stairs, no staff member may have limited mobility.
+- A team can only visit two clients per time window per day.
+
+If a client cannot be scheduled, include its id in `unassignedClientIds` and do not assign it.
+
+---
+
+{
+  "Teams": [
+    {
+      "TeamId": "T01",
+      "MemberAId": "S01",
+      "MemberBId": "S05"
+    },
+    {
+      "TeamId": "T02",
+      "MemberAId": "S03",
+      "MemberBId": "S08"
+    },
+    {
+      "TeamId": "T03",
+      "MemberAId": "S02",
+      "MemberBId": "S06"
+    },
+    {
+      "TeamId": "T04",
+      "MemberAId": "S04",
+      "MemberBId": "S07"
+    }
+  ],
+  "Assignments": [
+    {
+      "TeamId": "T01",
+      "ClientId": "C046",
+      "Day": "Monday",
+      "Window": "Morning",
+      "DurationMinutes": 180,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C018",
+      "Day": "Monday",
+      "Window": "Morning",
+      "DurationMinutes": 210,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C037",
+      "Day": "Monday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C029",
+      "Day": "Monday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C016",
+      "Day": "Monday",
+      "Window": "Afternoon",
+      "DurationMinutes": 60,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C040",
+      "Day": "Monday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C024",
+      "Day": "Tuesday",
+      "Window": "Morning",
+      "DurationMinutes": 60,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C008",
+      "Day": "Tuesday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C050",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C045",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C023",
+      "Day": "Wednesday",
+      "Window": "Morning",
+      "DurationMinutes": 150,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C032",
+      "Day": "Wednesday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C033",
+      "Day": "Wednesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C005",
+      "Day": "Wednesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 120,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C049",
+      "Day": "Thursday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C044",
+      "Day": "Thursday",
+      "Window": "Noon",
+      "DurationMinutes": 120,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C019",
+      "Day": "Thursday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C048",
+      "Day": "Thursday",
+      "Window": "Afternoon",
+      "DurationMinutes": 120,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C035",
+      "Day": "Friday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C043",
+      "Day": "Friday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C027",
+      "Day": "Friday",
+      "Window": "Noon",
+      "DurationMinutes": 120,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T01",
+      "ClientId": "C034",
+      "Day": "Friday",
+      "Window": "Noon",
+      "DurationMinutes": 150,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T02",
+      "ClientId": "C031",
+      "Day": "Monday",
+      "Window": "Afternoon",
+      "DurationMinutes": 120,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T02",
+      "ClientId": "C036",
+      "Day": "Monday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T02",
+      "ClientId": "C006",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T02",
+      "ClientId": "C009",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T02",
+      "ClientId": "C001",
+      "Day": "Tuesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T02",
+      "ClientId": "C013",
+      "Day": "Tuesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T02",
+      "ClientId": "C003",
+      "Day": "Wednesday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T02",
+      "ClientId": "C025",
+      "Day": "Wednesday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T03",
+      "ClientId": "C022",
+      "Day": "Monday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T03",
+      "ClientId": "C039",
+      "Day": "Monday",
+      "Window": "Noon",
+      "DurationMinutes": 120,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T03",
+      "ClientId": "C004",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T03",
+      "ClientId": "C042",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T03",
+      "ClientId": "C011",
+      "Day": "Tuesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 120,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T03",
+      "ClientId": "C021",
+      "Day": "Tuesday",
+      "Window": "Afternoon",
+      "DurationMinutes": 150,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T03",
+      "ClientId": "C020",
+      "Day": "Thursday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T03",
+      "ClientId": "C028",
+      "Day": "Thursday",
+      "Window": "Noon",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T03",
+      "ClientId": "C010",
+      "Day": "Friday",
+      "Window": "Afternoon",
+      "DurationMinutes": 240,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T03",
+      "ClientId": "C015",
+      "Day": "Friday",
+      "Window": "Afternoon",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T04",
+      "ClientId": "C002",
+      "Day": "Monday",
+      "Window": "Morning",
+      "DurationMinutes": 150,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T04",
+      "ClientId": "C041",
+      "Day": "Monday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T04",
+      "ClientId": "C012",
+      "Day": "Tuesday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T04",
+      "ClientId": "C017",
+      "Day": "Tuesday",
+      "Window": "Morning",
+      "DurationMinutes": 60,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T04",
+      "ClientId": "C014",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T04",
+      "ClientId": "C030",
+      "Day": "Tuesday",
+      "Window": "Noon",
+      "DurationMinutes": 120,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T04",
+      "ClientId": "C007",
+      "Day": "Thursday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T04",
+      "ClientId": "C026",
+      "Day": "Thursday",
+      "Window": "Morning",
+      "DurationMinutes": 90,
+      "Sequence": 2,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T04",
+      "ClientId": "C038",
+      "Day": "Friday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 1,
+      "Notes": ""
+    },
+    {
+      "TeamId": "T04",
+      "ClientId": "C047",
+      "Day": "Friday",
+      "Window": "Noon",
+      "DurationMinutes": 60,
+      "Sequence": 2,
+      "Notes": ""
+    }
+  ],
+  "UnassignedClientIds": [],
+  "Notes": [
+    "T03 (S02\u002BS06) is restricted to no-pet clients due to pet allergies.",
+    "T04 (S04\u002BS07) is restricted to no-stairs clients due to limited mobility and has no window-cleaning capability.",
+    "T02 has limited shared availability (Mon PM, Tue Noon/PM, Wed Noon), so it carries fewer total assignments; workload was otherwise balanced within constraints."
+  ]
+}

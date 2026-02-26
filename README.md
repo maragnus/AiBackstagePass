@@ -1,4 +1,4 @@
-
+NOTE: NDJSON and JSONL are identical formats.
 
 # Benchmark
 

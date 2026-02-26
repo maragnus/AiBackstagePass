@@ -31,7 +31,7 @@ builder.Services.AddSingleton<OpenAIClient>(sp =>
     var options = sp.GetRequiredService<IOptions<OpenAIOptions>>().Value;
     var clientOptions = new OpenAIClientOptions
     {
-        NetworkTimeout = TimeSpan.FromMinutes(10),
+        NetworkTimeout = TimeSpan.FromMinutes(30),
         RetryPolicy = new ClientRetryPolicy(0)
     };
     return new OpenAIClient(new ApiKeyCredential(options.ApiKey), clientOptions);
@@ -61,11 +61,6 @@ foreach (var model in models)
     Console.WriteLine($"Benchmarking model: {model}");
     var client = openAi.GetChatClient(model).AsIChatClient();
 
-    Serializers.CanonicalEncoding = false;
-    await BenchmarkModel(client, model, scenario, "csv", Serializers.ToCsv(scenario.Staff), Serializers.ToCsv(scenario.Clients));
-    await BenchmarkModel(client, model, scenario, "json", Serializers.ToJson(scenario.Staff), Serializers.ToJson(scenario.Clients));
-    await BenchmarkModel(client, model, scenario, "ndjson", Serializers.ToNdJson(scenario.Staff), Serializers.ToNdJson(scenario.Clients));
-    
     Serializers.CanonicalEncoding = true;
     Serializers.CanonicalSeparator = ":";
     await BenchmarkModel(client, model, scenario, "csv", Serializers.ToCsv(scenario.Staff), Serializers.ToCsv(scenario.Clients));
@@ -78,6 +73,11 @@ foreach (var model in models)
     await BenchmarkModel(client, model, scenario, "json", Serializers.ToJson(scenario.Staff), Serializers.ToJson(scenario.Clients));
     await BenchmarkModel(client, model, scenario, "ndjson", Serializers.ToNdJson(scenario.Staff), Serializers.ToNdJson(scenario.Clients));
 
+    Serializers.CanonicalEncoding = false;
+    await BenchmarkModel(client, model, scenario, "csv", Serializers.ToCsv(scenario.Staff), Serializers.ToCsv(scenario.Clients));
+    await BenchmarkModel(client, model, scenario, "json", Serializers.ToJson(scenario.Staff), Serializers.ToJson(scenario.Clients));
+    await BenchmarkModel(client, model, scenario, "ndjson", Serializers.ToNdJson(scenario.Staff), Serializers.ToNdJson(scenario.Clients));
+    
     // For now, only run the first model
     break;
 }
@@ -86,7 +86,7 @@ foreach (var model in models)
 async Task BenchmarkModel(IChatClient client, string model, PlanningScenario scenario, string format, string staff, string clients)
 {
     var canonical = Serializers.CanonicalEncoding ? "Canonical" : "Verbose";
-    var separator = Serializers.CanonicalSeparator == ":" ? "Colon" : "Underscore";
+    var separator = Serializers.CanonicalEncoding ? (Serializers.CanonicalSeparator == ":" ? "Colon" : "Underscore") : "N/A";
     Console.WriteLine($"Model: {model}, Encoding: {canonical}, Separator: {separator}, Format: {format}");
 
     var scheduleMessage = new ChatMessage(ChatRole.User,
@@ -124,7 +124,7 @@ async Task BenchmarkModel(IChatClient client, string model, PlanningScenario sce
 
     var options = new ChatOptions
     {
-        Reasoning = new ReasoningOptions() { Effort = ReasoningEffort.High, Output = ReasoningOutput.Full }
+        Reasoning = new ReasoningOptions() { Effort = ReasoningEffort.High, Output = ReasoningOutput.None }
     };
     var stopwatch = Stopwatch.StartNew();
     var response = await client.GetResponseAsync<SchedulingResponse>([systemMessage, scheduleMessage], options);
