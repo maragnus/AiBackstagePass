@@ -10,14 +10,14 @@ public static class Serializers
     public static bool CanonicalEncoding { get; set; }
     public static string CanonicalSeparator { get; set; } = ":";
 
-    private static readonly JsonSerializerOptions JsonOptions = new JsonSerializerOptions
+    public static readonly JsonSerializerOptions JsonOptions = new JsonSerializerOptions
     {
         WriteIndented = false,
         DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull,
         Converters = { new JsonStringEnumConverter() }
     };
 
-    private static readonly JsonSerializerOptions JsonOptionsIndented = new JsonSerializerOptions(JsonOptions) { WriteIndented = true };
+    public static readonly JsonSerializerOptions JsonOptionsIndented = new JsonSerializerOptions(JsonOptions) { WriteIndented = true };
 
     private static string Encode(DayOfWeek dayOfWeek, TimeWindows timeWindows)
     {

@@ -11,6 +11,7 @@ using System.ClientModel;
 using System.ClientModel.Primitives;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using System.Text.Json;
 using AiBackstagePass.Common;
 using Microsoft.Extensions.AI;
 using Microsoft.Extensions.Configuration;
@@ -45,7 +46,7 @@ var scenario = DemoScenarioFactory.LoadScenario(OutputClientsCsvPath, OutputStaf
 var openAi = app.Services.GetRequiredService<OpenAIClient>();
 
 // string[] models = ["gpt-5-nano", "gpt-5-mini", "gpt-5.2", "gpt-5.2-codex"];
-string[] models = ["gpt-5-mini"];
+string[] models = ["gpt-5.2"];
 
 var systemMessage = new ChatMessage(ChatRole.System,
     """
@@ -104,9 +105,11 @@ async Task BenchmarkModel(IChatClient client, string model, PlanningScenario sce
         - `nostairs` means "limited mobility" for staff and `stairs` means "has stairs" for clients.
         - `sunday`..`saturday` are availability windows. Values may be `Morning,Noon,Afternoon` or encoded as `Mo:A`, `Tu:N`, `Fr:P`.
         - `None` or `X` means unavailable.
+        - Do not consider travel time or client hours for this exercise.
 
         Task:
         Create two-person teams and assign each client to a team, day (Monday-Friday), and time window (Morning/Noon/Afternoon).
+        Distribute assignments evenly across teams and days as much as possible.
 
         Hard constraints:
         - Client availability must include the assigned day+window.
@@ -114,19 +117,32 @@ async Task BenchmarkModel(IChatClient client, string model, PlanningScenario sce
         - If a client requires window cleaning, at least one staff member must clean windows.
         - If a client has pets, no staff member may have pet allergy.
         - If a client has stairs, no staff member may have limited mobility.
+        - A team can only visit two clients per time window per day.
 
         If a client cannot be scheduled, include its id in `unassignedClientIds` and do not assign it.
         """);
 
     var options = new ChatOptions
     {
-        Reasoning = new ReasoningOptions() { Effort = ReasoningEffort.High, Output = ReasoningOutput.None },
+        Reasoning = new ReasoningOptions() { Effort = ReasoningEffort.High, Output = ReasoningOutput.Full }
     };
     var stopwatch = Stopwatch.StartNew();
     var response = await client.GetResponseAsync<SchedulingResponse>([systemMessage, scheduleMessage], options);
     stopwatch.Stop();
 
     Console.WriteLine($"Latency: {stopwatch.Elapsed.TotalSeconds:0} s, Tokens: input={response.Usage?.InputTokenCount}, output={response.Usage?.OutputTokenCount}, reasoning={response.Usage?.ReasoningTokenCount}, total={response.Usage?.TotalTokenCount}, unassigned={response.Result.UnassignedClientIds.Length}");
+
+    using var file = File.CreateText($"response.{model}.{canonical}.{separator}.{format}.txt");
+    file.WriteLine($"Model: {model}");
+    file.WriteLine($"Encoding: {canonical}");
+    file.WriteLine($"Separator: {separator}");
+    file.WriteLine($"Format: {format}");
+    file.WriteLine();
+    file.WriteLine(scheduleMessage.Text);
+    file.WriteLine();
+    file.WriteLine("---");
+    file.WriteLine();
+    file.WriteLine(JsonSerializer.Serialize(response.Result, Serializers.JsonOptionsIndented));
 
     ValidateResponse(scenario, response.Result);
 }
