@@ -45,7 +45,7 @@ public static class Serializers
         foreach (var client in clients)
         {
             using var row = writer.NewRow();
-            row["id"].Set(client.ClientId);
+            row["client id"].Set(client.ClientId);
             row["h3"].Set(client.Location.H3Cell);
             row["windows"].Set(Encode("W", client.RequiresWindowCleaning));
             row["pets"].Set(Encode("P", client.HasPets));
@@ -68,11 +68,11 @@ public static class Serializers
         foreach (var member in staff)
         {
             using var row = writer.NewRow();
-            row["id"].Set(member.StaffId);
+            row["staff id"].Set(member.StaffId);
             row["h3"].Set(member.Location.H3Cell);
             row["windows"].Set(Encode("W", member.CleansWindows));
-            row["pets"].Set(Encode("P", member.HasPetAllergy));
-            row["stairs"].Set(Encode("S", member.LimitedMobility));
+            row["nopets"].Set(Encode("P", member.HasPetAllergy));
+            row["nostairs"].Set(Encode("S", member.LimitedMobility));
             row["sunday"].Set(Encode(DayOfWeek.Sunday, member.Availability.Sunday));
             row["monday"].Set(Encode(DayOfWeek.Monday, member.Availability.Monday));
             row["tuesday"].Set(Encode(DayOfWeek.Tuesday, member.Availability.Tuesday));
@@ -111,8 +111,8 @@ public static class Serializers
             staff.StaffId,
             H3 = staff.Location.H3Cell,
             Windows = Encode("W", staff.CleansWindows),
-            Pets = Encode("P", staff.HasPetAllergy),
-            Stairs = Encode("S", staff.LimitedMobility),
+            NoPets = Encode("P", staff.HasPetAllergy),
+            NoStairs = Encode("S", staff.LimitedMobility),
             Sunday = Encode(DayOfWeek.Sunday, staff.Availability.Sunday),
             Monday = Encode(DayOfWeek.Monday, staff.Availability.Monday),
             Tuesday = Encode(DayOfWeek.Tuesday, staff.Availability.Tuesday),
