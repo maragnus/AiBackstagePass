@@ -26,6 +26,13 @@ const string OutputStaffCsvPath = "data/staff.enriched.csv";
 const string OutputClientsJsonPath = "data/clients.enriched.json";
 const string OutputStaffJsonPath = "data/staff.enriched.json";
 const int H3Resolution = 8;
+const double MinimumEstimatedHours = 1.0;
+const double EstimatedHoursRange = 3.0;
+const double SqftPerUnit = 1000.0;
+const double SqftWeight = 0.5;
+const double WindowSqftWeight = 1.1;
+const double BedWeight = 0.25;
+const double BathWeight = 0.45;
 
 var builder = Host.CreateApplicationBuilder(args);
 builder.Configuration.AddUserSecrets<Program>();
@@ -41,6 +48,7 @@ var hasGoogleCredentials = HasGoogleCredentials(googleMapsOptions);
 
 var sourceClients = DemoScenarioFactory.LoadClientRows(InputClientsCsvPath);
 var sourceStaff = DemoScenarioFactory.LoadStaffRows(InputStaffCsvPath);
+var workScoreRange = GetWorkScoreRange(sourceClients);
 var geocodeCache = new Dictionary<string, (double? Latitude, double? Longitude, string Status)>(StringComparer.OrdinalIgnoreCase);
 
 using var httpClient = new HttpClient();
@@ -54,6 +62,7 @@ var enrichedClients = await EnrichRowsAsync(
     row => row.GeocodeStatus,
     (row, latitude, longitude, h3Cell, geocodeStatus) => row with
     {
+        EstimatedHours = CalculateEstimatedHours(row, workScoreRange.Min, workScoreRange.Max),
         Latitude = latitude,
         Longitude = longitude,
         H3Cell = h3Cell,
@@ -250,6 +259,55 @@ static async Task WriteJsonAsync<T>(string path, IReadOnlyList<T> rows, Cancella
         JsonSerializer.Serialize(rows, new JsonSerializerOptions { WriteIndented = true }),
         cancellationToken);
 }
+
+static (double Min, double Max) GetWorkScoreRange(IReadOnlyList<ClientCsvRow> rows)
+{
+    if (rows.Count == 0)
+        return (0, 0);
+
+    var min = double.MaxValue;
+    var max = double.MinValue;
+    foreach (var row in rows)
+    {
+        var score = CalculateWorkScore(row);
+        if (score < min)
+            min = score;
+        if (score > max)
+            max = score;
+    }
+
+    return (min, max);
+}
+
+static double CalculateWorkScore(ClientCsvRow row)
+{
+    var sqftScore = row.Sqft / SqftPerUnit;
+    var score = (sqftScore * SqftWeight)
+        + (row.Bed * BedWeight)
+        + (row.Bath * BathWeight);
+
+    if (row.Windows)
+        score += sqftScore * WindowSqftWeight;
+
+    return score;
+}
+
+static double CalculateEstimatedHours(ClientCsvRow row, double minScore, double maxScore)
+{
+    if (maxScore <= minScore)
+        return MinimumEstimatedHours;
+
+    var score = CalculateWorkScore(row);
+    var scaledHours = MinimumEstimatedHours + ((score - minScore) / (maxScore - minScore)) * EstimatedHoursRange;
+    var roundedHours = RoundToHalfHour(scaledHours);
+    if (roundedHours < MinimumEstimatedHours)
+        return MinimumEstimatedHours;
+
+    return roundedHours;
+}
+
+static double RoundToHalfHour(double hours) =>
+    Math.Round(hours * 2, MidpointRounding.AwayFromZero) / 2;
 
 internal sealed class GoogleMapsOptions
 {

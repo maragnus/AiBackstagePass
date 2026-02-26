@@ -21,6 +21,7 @@ public sealed class DemoScenarioFactoryTests
 
             Assert.Single(rows);
             var row = rows[0];
+            Assert.Null(row.EstimatedHours);
             Assert.Null(row.Latitude);
             Assert.Null(row.Longitude);
             Assert.Null(row.H3Cell);
@@ -65,12 +66,12 @@ public sealed class DemoScenarioFactoryTests
     {
         var clientsCsv = string.Join('\n',
             "ClientId,ClientName,Address,Bed,Bath,Sqft,Windows,Pets,Stairs,Monday,Tuesday,Wednesday,Thursday,Friday,PrefersSameTeam,PreferredStaffId,Latitude,Longitude,H3Cell,GeocodeStatus",
-            "C001,Ada,1 Main St,2,1,900,True,False,False,M,N,A,M,N,False,,43.123456,-70.654321,882a1340b9fffff,OK",
-            "C002,Bob,2 Main St,3,2,1200,False,True,True,N,M,N,A,M,True,S01,,,," );
+            "C001,Ada,1 Main St,2,1,900,True,False,False,A,N,P,A,N,False,,43.123456,-70.654321,882a1340b9fffff,OK",
+            "C002,Bob,2 Main St,3,2,1200,False,True,True,N,A,N,P,A,True,S01,,,," );
 
         var staffCsv = string.Join('\n',
             "StaffId,StaffName,Address,HasPetAllergy,LimitedMobility,CleansWindows,Monday,Tuesday,Wednesday,Thursday,Friday,Latitude,Longitude,H3Cell,GeocodeStatus",
-            "S01,Alex,10 Oak St,False,False,True,M,M,M,M,M,43.223456,-70.754321,882a1340a1fffff,OK",
+            "S01,Alex,10 Oak St,False,False,True,A,A,A,A,A,43.223456,-70.754321,882a1340a1fffff,OK",
             "S02,Sam,20 Pine St,True,False,False,N,N,N,N,N,,,," );
 
         var testDirectory = CreateTestDirectory();
@@ -122,13 +123,14 @@ public sealed class DemoScenarioFactoryTests
                 2,
                 1,
                 900,
+                2.5,
                 true,
                 false,
                 false,
-                "M",
-                "N",
                 "A",
-                "M",
+                "N",
+                "P",
+                "A",
                 "N",
                 false,
                 null,
@@ -143,14 +145,15 @@ public sealed class DemoScenarioFactoryTests
                 3,
                 2,
                 1200,
+                null,
                 false,
                 true,
                 true,
                 "N",
-                "M",
-                "N",
                 "A",
-                "M",
+                "N",
+                "P",
+                "A",
                 true,
                 "S01",
                 null,
@@ -189,10 +192,10 @@ public sealed class DemoScenarioFactoryTests
                 false,
                 false,
                 true,
-                "M",
-                "N",
                 "A",
-                "M",
+                "N",
+                "P",
+                "A",
                 "N",
                 43.223456,
                 -70.754321,
@@ -206,10 +209,10 @@ public sealed class DemoScenarioFactoryTests
                 false,
                 false,
                 "N",
+                "P",
                 "A",
-                "M",
                 "N",
-                "A",
+                "P",
                 null,
                 null,
                 null,

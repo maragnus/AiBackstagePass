@@ -1,16 +1,5 @@
 namespace AiBackstagePass.Common;
 
-public enum Weekday
-{
-    Sunday,
-    Monday,
-    Tuesday,
-    Wednesday,
-    Thursday,
-    Friday,
-    Saturday
-}
-
 [Flags]
 public enum TimeWindows
 {
@@ -29,6 +18,7 @@ public sealed record ClientCsvRow(
     int Bed,
     int Bath,
     int Sqft,
+    double? EstimatedHours,
     bool Windows,
     bool Pets,
     bool Stairs,
@@ -92,6 +82,7 @@ public sealed record ClientPlan(
     int Bed,
     int Bath,
     int Sqft,
+    double? EstimatedHours,
     GeoPoint Location,
     bool HasPets,
     bool HasStairs,
@@ -101,7 +92,7 @@ public sealed record ClientPlan(
     Schedule Schedule);
 
 public sealed record DailyStaffAvailability(
-    Weekday Day,
+    DayOfWeek Day,
     TimeWindows Windows);
 
 public sealed record StaffPlan(
@@ -127,7 +118,7 @@ public sealed record PlanningScenario(
 public sealed record TeamAssignment(
     string TeamId,
     string ClientId,
-    Weekday Day,
+    DayOfWeek Day,
     TimeWindows Window,
     int DurationMinutes,
     int Sequence,
@@ -144,7 +135,7 @@ public sealed record OptimizationPlan(
 public sealed record RouteStop(
     int Sequence,
     string TeamId,
-    Weekday Day,
+    DayOfWeek Day,
     string ClientId,
     string Address,
     double Latitude,
@@ -156,7 +147,7 @@ public sealed record RouteStop(
     TimeOnly Departure);
 
 public sealed record DailyTeamRoute(
-    Weekday Day,
+    DayOfWeek Day,
     string TeamId,
     int TotalDriveMinutes,
     int TotalServiceMinutes,

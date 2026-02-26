@@ -48,6 +48,12 @@ public static class DemoScenarioFactory
         "GeocodeStatus"
     ];
 
+    private static readonly string[] ClientEnrichmentColumns =
+    [
+        "EstimatedHours",
+        .. GeocodeColumns
+    ];
+
     public static PlanningScenario LoadScenario(
         string clientsCsvPath,
         string staffCsvPath,
@@ -99,6 +105,7 @@ public static class DemoScenarioFactory
         var friday = header.IndexOf("Friday");
         var prefersSameTeam = header.IndexOf("PrefersSameTeam");
         var hasPreferredStaffId = header.TryIndexOf("PreferredStaffId", out var preferredStaffId);
+        var hasEstimatedHours = header.TryIndexOf("EstimatedHours", out var estimatedHours);
         var hasLatitude = header.TryIndexOf("Latitude", out var latitude);
         var hasLongitude = header.TryIndexOf("Longitude", out var longitude);
         var hasH3Cell = header.TryIndexOf("H3Cell", out var h3Cell);
@@ -114,6 +121,7 @@ public static class DemoScenarioFactory
                 readRow[bed].Parse<int>(),
                 readRow[bath].Parse<int>(),
                 readRow[sqft].Parse<int>(),
+                hasEstimatedHours ? readRow[estimatedHours].TryParse<double>() : null,
                 readRow[windows].Parse<bool>(),
                 readRow[pets].Parse<bool>(),
                 readRow[stairs].Parse<bool>(),
@@ -136,7 +144,7 @@ public static class DemoScenarioFactory
     public static void WriteClientRows(string clientsCsvPath, IReadOnlyList<ClientCsvRow> rows)
     {
         using var writer = CreateCsvWriter(clientsCsvPath);
-        writer.Header.Add([.. BaseClientColumns, .. GeocodeColumns]);
+        writer.Header.Add([.. BaseClientColumns, .. ClientEnrichmentColumns]);
         writer.Header.Write();
 
         foreach (var row in rows)
@@ -148,6 +156,7 @@ public static class DemoScenarioFactory
             writeRow["Bed"].Format(row.Bed);
             writeRow["Bath"].Format(row.Bath);
             writeRow["Sqft"].Format(row.Sqft);
+            writeRow["EstimatedHours"].Set(row.EstimatedHours?.ToString() ?? string.Empty);
             writeRow["Windows"].Set(row.Windows.ToString());
             writeRow["Pets"].Set(row.Pets.ToString());
             writeRow["Stairs"].Set(row.Stairs.ToString());
@@ -255,6 +264,7 @@ public static class DemoScenarioFactory
             row.Bed,
             row.Bath,
             row.Sqft,
+            row.EstimatedHours,
             ToGeoPoint(row.Latitude, row.Longitude, row.H3Cell),
             row.Pets,
             row.Stairs,
