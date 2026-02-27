@@ -54,6 +54,12 @@ public static class DemoScenarioFactory
         .. GeocodeColumns
     ];
 
+    private static readonly string[] StaffEnrichmentColumns =
+    [
+        .. GeocodeColumns,
+        "DistancesToOtherStaffMiles"
+    ];
+
     public static PlanningScenario LoadScenario(
         string clientsCsvPath,
         string staffCsvPath,
@@ -193,6 +199,7 @@ public static class DemoScenarioFactory
         var hasLongitude = header.TryIndexOf("Longitude", out var longitude);
         var hasH3Cell = header.TryIndexOf("H3Cell", out var h3Cell);
         var hasGeocodeStatus = header.TryIndexOf("GeocodeStatus", out var geocodeStatus);
+        var hasDistancesToOtherStaffMiles = header.TryIndexOf("DistancesToOtherStaffMiles", out var distancesToOtherStaffMiles);
 
         var rows = new List<RawStaffCsvRow>();
         foreach (var readRow in reader)
@@ -212,7 +219,8 @@ public static class DemoScenarioFactory
                 hasLatitude ? readRow[latitude].TryParse<double>() : null,
                 hasLongitude ? readRow[longitude].TryParse<double>() : null,
                 hasH3Cell ? readRow[h3Cell].ToNullableString() : null,
-                hasGeocodeStatus ? readRow[geocodeStatus].ToNullableString() : null));
+                hasGeocodeStatus ? readRow[geocodeStatus].ToNullableString() : null,
+                hasDistancesToOtherStaffMiles ? readRow[distancesToOtherStaffMiles].ToNullableString() : null));
         }
 
         return rows;
@@ -224,7 +232,7 @@ public static class DemoScenarioFactory
         bool includeEnrichedColumns = true)
     {
         var columns = includeEnrichedColumns
-            ? [.. BaseStaffColumns, .. GeocodeColumns]
+            ? [.. BaseStaffColumns, .. StaffEnrichmentColumns]
             : BaseStaffColumns;
         using var writer = CreateCsvWriter(staffCsvPath);
         writer.Header.Add(columns);
@@ -252,6 +260,7 @@ public static class DemoScenarioFactory
             writeRow["Longitude"].Set(row.Longitude?.ToString() ?? string.Empty);
             writeRow["H3Cell"].Set(row.H3Cell ?? string.Empty);
             writeRow["GeocodeStatus"].Set(row.GeocodeStatus ?? string.Empty);
+            writeRow["DistancesToOtherStaffMiles"].Set(row.DistancesToOtherStaffMiles ?? string.Empty);
         }
     }
 

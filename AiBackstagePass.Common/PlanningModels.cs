@@ -1,3 +1,5 @@
+using System.Runtime.CompilerServices;
+
 namespace AiBackstagePass.Common;
 
 [Flags]
@@ -49,7 +51,8 @@ public sealed record RawStaffCsvRow(
     double? Latitude,
     double? Longitude,
     string? H3Cell,
-    string? GeocodeStatus);
+    string? GeocodeStatus,
+    string? DistancesToOtherStaffMiles);
 
 public sealed record Schedule(TimeWindows Sunday, TimeWindows Monday, TimeWindows Tuesday, TimeWindows Wednesday, TimeWindows Thursday, TimeWindows Friday, TimeWindows Saturday)
 {
@@ -57,6 +60,18 @@ public sealed record Schedule(TimeWindows Sunday, TimeWindows Monday, TimeWindow
             : this(ToTimeWindows(sunday), ToTimeWindows(monday), ToTimeWindows(tuesday), ToTimeWindows(wednesday), ToTimeWindows(thursday), ToTimeWindows(friday), ToTimeWindows(saturday))
     {
     }
+
+    public TimeWindows this[DayOfWeek day] => day switch
+    {
+        DayOfWeek.Sunday => Sunday,
+        DayOfWeek.Monday => Monday,
+        DayOfWeek.Tuesday => Tuesday,
+        DayOfWeek.Wednesday => Wednesday,
+        DayOfWeek.Thursday => Thursday,
+        DayOfWeek.Friday => Friday,
+        DayOfWeek.Saturday => Saturday,
+        _ => throw new ArgumentOutOfRangeException(nameof(day), $"Invalid day of week: {day}")
+    };
 
     public static TimeWindows ToTimeWindows(string str)
     {

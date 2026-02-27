@@ -14,7 +14,8 @@
     "Latitude": 43.9660022,
     "Longitude": -69.926817,
     "H3Cell": "882a34c629fffff",
-    "GeocodeStatus": "OK"
+    "GeocodeStatus": "OK",
+    "DistancesToOtherStaffMiles": "S03=15.2|S02=24.8|S07=25.8|S08=28.1|S06=30.7|S04=33.3|S05=34.6"
   },
   {
     "StaffId": "S02",
@@ -31,7 +32,8 @@
     "Latitude": 44.014169,
     "Longitude": -70.42171499999999,
     "H3Cell": "882ba9269bfffff",
-    "GeocodeStatus": "OK"
+    "GeocodeStatus": "OK",
+    "DistancesToOtherStaffMiles": "S06=8.1|S04=9.1|S05=12.5|S03=24.1|S07=24.3|S01=24.8|S08=25.1"
   },
   {
     "StaffId": "S03",
@@ -48,7 +50,8 @@
     "Latitude": 44.1807315,
     "Longitude": -69.9940578,
     "H3Cell": "882a34d023fffff",
-    "GeocodeStatus": "OK"
+    "GeocodeStatus": "OK",
+    "DistancesToOtherStaffMiles": "S01=15.2|S02=24.1|S06=32.1|S04=33.1|S05=36.5|S07=37.0|S08=39.0"
   },
   {
     "StaffId": "S04",
@@ -65,7 +68,8 @@
     "Latitude": 43.97471729999999,
     "Longitude": -70.5963347,
     "H3Cell": "882a345a63fffff",
-    "GeocodeStatus": "OK"
+    "GeocodeStatus": "OK",
+    "DistancesToOtherStaffMiles": "S06=3.8|S05=5.2|S02=9.1|S08=26.1|S07=26.3|S03=33.1|S01=33.3"
   },
   {
     "StaffId": "S05",
@@ -82,7 +86,8 @@
     "Latitude": 43.9007531,
     "Longitude": -70.6162609,
     "H3Cell": "882a34581bfffff",
-    "GeocodeStatus": "OK"
+    "GeocodeStatus": "OK",
+    "DistancesToOtherStaffMiles": "S06=4.4|S04=5.2|S02=12.5|S08=22.8|S07=23.3|S01=34.6|S03=36.5"
   },
   {
     "StaffId": "S06",
@@ -99,7 +104,8 @@
     "Latitude": 43.9360963,
     "Longitude": -70.5424781,
     "H3Cell": "882a345127fffff",
-    "GeocodeStatus": "OK"
+    "GeocodeStatus": "OK",
+    "DistancesToOtherStaffMiles": "S04=3.8|S05=4.4|S02=8.1|S08=22.4|S07=22.5|S01=30.7|S03=32.1"
   },
   {
     "StaffId": "S07",
@@ -116,7 +122,8 @@
     "Latitude": 43.6810821,
     "Longitude": -70.2621333,
     "H3Cell": "882a34095dfffff",
-    "GeocodeStatus": "OK"
+    "GeocodeStatus": "OK",
+    "DistancesToOtherStaffMiles": "S08=2.4|S06=22.5|S05=23.3|S02=24.3|S01=25.8|S04=26.3|S03=37.0"
   },
   {
     "StaffId": "S08",
@@ -133,6 +140,7 @@
     "Latitude": 43.6616795,
     "Longitude": -70.30163720000002,
     "H3Cell": "882a34093dfffff",
-    "GeocodeStatus": "OK"
+    "GeocodeStatus": "OK",
+    "DistancesToOtherStaffMiles": "S07=2.4|S06=22.4|S05=22.8|S02=25.1|S04=26.1|S01=28.1|S03=39.0"
   }
 ]

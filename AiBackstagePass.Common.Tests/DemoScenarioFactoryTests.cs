@@ -54,6 +54,7 @@ public sealed class DemoScenarioFactoryTests
             Assert.Null(row.Longitude);
             Assert.Null(row.H3Cell);
             Assert.Null(row.GeocodeStatus);
+            Assert.Null(row.DistancesToOtherStaffMiles);
         }
         finally
         {
@@ -200,7 +201,8 @@ public sealed class DemoScenarioFactoryTests
                 43.223456,
                 -70.754321,
                 "882a1340a1fffff",
-                "OK"),
+                "OK",
+                "S002=69.1"),
             new(
                 "S002",
                 "Sam",
@@ -213,6 +215,7 @@ public sealed class DemoScenarioFactoryTests
                 "A",
                 "N",
                 "P",
+                null,
                 null,
                 null,
                 null,

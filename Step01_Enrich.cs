@@ -42,7 +42,7 @@ using var app = builder.Build();
 
 // Enable API: https://console.cloud.google.com/marketplace/product/google/geocoding-backend.googleapis.com
 // Create credentials (+ header button): https://console.cloud.google.com/google/maps-apis/credentials
-// dotnet user-secrets set "Google:ApiKey" "..." --file "Step01_EnrichClients.cs"
+// dotnet user-secrets set "Google:ApiKey" "..." --file "Step01_Enrich.cs"
 var googleMapsOptions = app.Services.GetRequiredService<IOptions<GoogleMapsOptions>>().Value;
 var hasGoogleCredentials = HasGoogleCredentials(googleMapsOptions);
 
@@ -96,15 +96,17 @@ var enrichedStaff = await EnrichRowsAsync(
     H3Resolution,
     CancellationToken.None);
 
+var enrichedStaffWithDistances = AddStaffDistances(enrichedStaff);
+
 DemoScenarioFactory.WriteClientRows(OutputClientsCsvPath, enrichedClients);
-DemoScenarioFactory.WriteStaffRows(OutputStaffCsvPath, enrichedStaff);
+DemoScenarioFactory.WriteStaffRows(OutputStaffCsvPath, enrichedStaffWithDistances);
 await WriteJsonAsync(OutputClientsJsonPath, enrichedClients, CancellationToken.None);
-await WriteJsonAsync(OutputStaffJsonPath, enrichedStaff, CancellationToken.None);
+await WriteJsonAsync(OutputStaffJsonPath, enrichedStaffWithDistances, CancellationToken.None);
 
 var scenario = DemoScenarioFactory.LoadScenario(OutputClientsCsvPath, OutputStaffCsvPath);
 
 Console.WriteLine($"Client rows: {enrichedClients.Count}");
-Console.WriteLine($"Staff rows : {enrichedStaff.Count}");
+Console.WriteLine($"Staff rows : {enrichedStaffWithDistances.Count}");
 Console.WriteLine($"Client CSV : {Path.GetFullPath(OutputClientsCsvPath)}");
 Console.WriteLine($"Staff CSV  : {Path.GetFullPath(OutputStaffCsvPath)}");
 Console.WriteLine($"Client JSON: {Path.GetFullPath(OutputClientsJsonPath)}");
@@ -160,6 +162,18 @@ static async Task<List<T>> EnrichRowsAsync<T>(
     }
 
     return enrichedRows;
+}
+
+static List<RawStaffCsvRow> AddStaffDistances(IReadOnlyList<RawStaffCsvRow> staff)
+{
+    var enriched = new List<RawStaffCsvRow>(staff.Count);
+    foreach (var member in staff)
+        enriched.Add(member with
+        {
+            DistancesToOtherStaffMiles = StaffDistanceFormatter.BuildDistancesToOtherStaffMiles(staff, member)
+        });
+
+    return enriched;
 }
 
 static async Task<(double? Latitude, double? Longitude, string Status)> GetGeocodeAsync(
